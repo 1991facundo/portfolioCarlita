@@ -1,4 +1,8 @@
 import About from './components/About';
+import Services from './components/Services';
+import Portfolio from './components/Portfolio';
+import Clients from './components/Clients';
+import Contact from './components/Contact';
 import './index.css';
 
 const App = () => {
@@ -19,32 +23,12 @@ const App = () => {
         </nav>
       </header>
       <main className="mt-16">
-        {/* Secciones de la página */}
+      
         <About />
-        <section id="services" className="py-20 bg-gray-200">
-          <div className="container mx-auto">
-            <h2 className="text-4xl font-bold mb-4">Services</h2>
-            <p>Do you want to communicate your product...</p>
-          </div>
-        </section>
-        <section id="portfolio" className="py-20">
-          <div className="container mx-auto">
-            <h2 className="text-4xl font-bold mb-4">Portfolio</h2>
-            <p>Here are some of my works...</p>
-          </div>
-        </section>
-        <section id="clients" className="py-20 bg-gray-200">
-          <div className="container mx-auto">
-            <h2 className="text-4xl font-bold mb-4">Clients</h2>
-            <p>Testimonials from my clients...</p>
-          </div>
-        </section>
-        <section id="contact" className="py-20">
-          <div className="container mx-auto">
-            <h2 className="text-4xl font-bold mb-4">Contact me</h2>
-            <p>Get in touch with me...</p>
-          </div>
-        </section>
+        <Services />
+        <Portfolio />
+        <Clients />
+        <Contact />
       </main>
     </div>
   );
