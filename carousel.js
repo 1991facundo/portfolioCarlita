@@ -1,4 +1,3 @@
-
 let currentSlide = 0;
 const slides = document.querySelectorAll('.carousel-item');
 
@@ -12,7 +11,6 @@ function nextSlide() {
     currentSlide = (currentSlide + 1) % slides.length;
     showSlide(currentSlide);
 }
-
 
 setInterval(nextSlide, 5000);
 
