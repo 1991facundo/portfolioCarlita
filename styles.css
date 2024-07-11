@@ -1,3 +1,15 @@
+/* FONTS */
+
+@font-face {
+    font-family: 'Amsterdam two';
+    src: url('fonts/amsterdam-two-ttf.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Questrial';
+    src: url('fonts/Questrial-Regular.ttf') format('truetype');
+}
+
 /* General Reset */
 * {
     margin: 0;
@@ -8,29 +20,42 @@
 body {
     padding-top: 80px;
     margin: 0;
-    background-color: blanchedalmond;
+    background-color: #f5f5dc;
     font-family: Arial, sans-serif;
     color: #4a4a4a;
 }
 
 /* NAV */
+/* Navbar */
 .navbar {
-    background-color: white;
+    background-color: #f5f5dc;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 50;
-    padding: 1rem 2rem;
+    padding: 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .navbar-brand {
-    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar-brand h2 {
+    font-family: 'Amsterdam two', sans-serif;
+    font-size: 1.2rem;
     font-weight: bold;
+    color: #333;
+}
+
+.navbar-brand p {
+    font-family: 'Questrial', sans-serif;
+    font-size: 0.9rem;
     color: #333;
 }
 
@@ -50,22 +75,31 @@ body {
     color: #2a2a2a;
 }
 
+/* Default Navbar Toggle Hidden */
+.navbar-toggle {
+    display: none;
+}
 
+/*Carousel*/
 
-/* CAROUSEL */
 .carousel {
     position: relative;
     width: 100%;
     overflow: hidden;
+    margin-top: 10px;
 }
 
 .carousel-item {
     display: none;
+    width: 100%;
     position: relative;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .carousel-item.active {
-    display: block;
+    display: flex;
 }
 
 .carousel-item img {
@@ -76,22 +110,27 @@ body {
 
 .text-container {
     position: absolute;
-    bottom: 1rem;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.5);
     border: 2px solid #F5F5DC;
     border-radius: 8px;
     padding: 1rem;
-    text-align: center;
     color: white;
+    max-width: 90%;
+    box-sizing: border-box;
+    font-size: xx-large;
 }
+
+
+
 
 
 /* ABOUT ME */
 .about-me {
-    padding: 6rem 2rem;
-    background: #f8f8f8;
+    padding: 3rem 2rem;
+    background-color: #f5f5dc;
 }
 
 .about-me-content {
@@ -210,70 +249,96 @@ body {
     border-radius: 8px;
     padding: 1rem;
     text-align: center;
-    transition: box-shadow 0.3s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    background-color: #dadab195;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 .portfolio-item:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
 }
 
 .portfolio-item img {
-    width: 300px;
-    height: 300px;
+    width: 80%; 
+    height: auto;
     object-fit: cover;
     border-radius: 8px;
+    transition: transform 0.3s ease;
 }
 
-.portfolio-item h3 {
-    font-size: 1.25rem;
-    font-weight: bold;
-    margin: 1rem 0 0.5rem;
+.portfolio-item h3, .portfolio-item p {
+    transition: transform 0.3s ease;
+    margin: 15px;
+}
+
+.portfolio-item:hover img,
+.portfolio-item:hover h3,
+.portfolio-item:hover p {
+    transform: scale(1.05);
 }
 
 
-/* TESTIMONIALS */
 /* TESTIMONIALS */
 .testimonials {
     padding: 6rem 2rem;
-    background: #f0f0f0;
+    background-color: #f5f5dc;
+    text-align: center;
 }
 
 .testimonials h2 {
     font-size: 2rem;
     font-weight: bold;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .testimonials-content {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 1.5rem;
+    flex-direction: column;
+    gap: 4rem;
+    align-items: center;
 }
 
 .testimonial {
-    background: white;
+    background: #e5e2c8; 
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    text-align: center;
-    width: calc(25% - 1rem);
+    display: flex;
+    align-items: center;
+    max-width: 900px;
+    width: 100%;
+    text-align: left;
+    border: 2px solid #d4d1b8; 
 }
 
-.testimonial:hover {
-    transform: scale(1.05);
+.testimonial:nth-child(odd) {
+    flex-direction: row-reverse;
 }
 
 .testimonial img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 1rem;
+    width: 150px;
+    height: 150px;
+    margin: 0 2rem;
+    border-radius: 0;
+}
+
+.testimonial::before {
+    content: '';
+    height: 150px;
+    width: 1px;
+    background: #ccc;
 }
 
 .testimonial p {
     margin: 0.5rem 0;
+}
+
+.testimonial-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .font-bold {
@@ -307,66 +372,69 @@ body {
 .contact {
     padding: 6rem 2rem;
     background: url('assets/contacto.jpg') no-repeat center center/cover;
-    text-align: center;
+    text-align: left;
     color: white;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-.contact::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
+.contact-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
     width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); 
-    z-index: 1;
+    padding: 2rem;
+    text-align: left;
 }
 
 .contact h2 {
-    font-size: 2rem;
+    color: white;
+    font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
-    position: relative;
-    z-index: 2;
 }
 
 .contact p {
     margin: 0.5rem 0;
-    position: relative;
-    z-index: 2;
+    font-size: 1.5rem;
 }
 
 .contact-links {
-    margin-top: 1rem;
     position: relative;
     z-index: 2;
-    text-align: left;
-    display: inline-block;
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-top: 2rem;
 }
 
 .contact-links a {
     color: white;
     text-decoration: none;
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    margin-bottom: 0.5rem;
-    transition: transform 0.3s ease;
+    gap: 0.5rem;
+    opacity: 0; 
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    font-size: 1rem;
 }
 
-.contact-links a:hover {
-    transform: scale(1.05);
-}
-
-.contact-links img {
+.contact-links a img {
     width: 24px;
     height: 24px;
-    margin-right: 0.5rem;
 }
 
-.contact-links span {
-    vertical-align: middle;
+.contact-links a.show {
+    opacity: 1;
+    transform: translateX(0);
 }
+
+
 
 
 
@@ -376,4 +444,106 @@ body {
     padding: 2rem;
     text-align: center;
     font-size: 1rem;
+}
+
+
+/* FX */
+
+.text-container, .text-content, .image-content, .testimonial {
+    transition: all 0.5s ease;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    /* Navbar */
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+    .navbar-links a {
+        padding: 10px;
+        border-top: 1px solid #ccc;
+    }
+    .navbar-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: #333;
+    }
+    .navbar-links.show {
+        display: flex;
+    }
+
+    /* Carousel */
+    .carousel-item img {
+        max-height: 400px;
+    }
+    .text-container {
+        font-size: large;
+    }
+
+    /* Portfolio */
+    .portfolio-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .portfolio-item {
+        flex: 1 1 100%;
+        margin-bottom: 1rem;
+    }
+
+    /* About Me */
+    .about-me-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .image-content img {
+        max-width: 100%;
+    }
+
+    /* Services */
+    .services-grid {
+        flex-direction: column;
+    }
+    .service-item {
+        flex: 1 1 100%;
+        margin-bottom: 1rem;
+    }
+
+    /*testimonials*/
+
+    .testimonials-content {
+        gap: 2rem;
+    }
+    .testimonial {
+        flex-direction: column;
+        text-align: center;
+    }
+    .testimonial:nth-child(odd) {
+        flex-direction: column;
+    }
+    .testimonial img {
+        margin: 0 0 1rem 0;
+        width: 100px;
+        height: 100px;
+    }
+    .testimonial::before {
+        display: none;
+    }
+    .testimonial-details {
+        align-items: center;
+    }
+}
+
+@media (max-width: 488px) {
+    .text-container {
+        font-size: small;
+    }
 }
