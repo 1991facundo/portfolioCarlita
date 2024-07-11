@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Carla Ferrari - Ad & Marketing Specialist</title>
     <link href="styles.css" rel="stylesheet" />
-
   </head>
   <body>
     <!-- Navbar -->
@@ -16,18 +15,21 @@
       </div>
       <div class="navbar-toggle">☰</div>
       <div class="navbar-links">
-        <a href="#carousel">Inicio</a>
-        <a href="#about-me">Acerca de mí</a>
-        <a href="#services">Servicios</a>
-        <a href="#portfolio">Portafolio</a>
-        <a href="#testimonials">Testimonios</a>
-        <a href="#book">Libro</a>
-        <a href="#contact">Contacto</a>
+        <a href="#carousel" data-key="navbar.home">Inicio</a>
+        <a href="#about-me" data-key="navbar.about">Acerca de mí</a>
+        <a href="#services" data-key="navbar.services">Servicios</a>
+        <a href="#portfolio" data-key="navbar.portfolio">Portafolio</a>
+        <a href="#testimonials" data-key="navbar.testimonials">Testimonios</a>
+        <a href="#book" data-key="navbar.book">Libro</a>
+        <a href="#contact" data-key="navbar.contact">Contacto</a>
+        <select id="lang-selector">
+          <option value="es">Español</option>
+          <option value="en">English</option>
+        </select>
       </div>
     </nav>
 
     <!-- Carousel -->
-
     <section id="carousel" class="carousel">
       <div class="carousel-item active">
         <picture>
@@ -35,8 +37,8 @@
           <img src="assets/carousel1.jpg" alt="Imagen 1" />
         </picture>
         <div class="text-container">
-          <h2>Las ideas poderosas, pueden cambiar el mundo.</h2>
-          <p>Llevá tu negocio al siguiente nivel.</p>
+          <h2 data-key="carousel.slide1.title">Las ideas poderosas, pueden cambiar el mundo.</h2>
+          <p data-key="carousel.slide1.subtitle">Llevá tu negocio al siguiente nivel.</p>
         </div>
       </div>
       <div class="carousel-item">
@@ -45,8 +47,8 @@
           <img src="assets/carousel2.jpg" alt="Imagen 2" />
         </picture>
         <div class="text-container">
-          <h2>Las ideas poderosas, pueden cambiar el mundo.</h2>
-          <p>Llevá tu negocio al siguiente nivel.</p>
+          <h2 data-key="carousel.slide2.title">Las ideas poderosas, pueden cambiar el mundo.</h2>
+          <p data-key="carousel.slide2.subtitle">Llevá tu negocio al siguiente nivel.</p>
         </div>
       </div>
       <div class="carousel-item">
@@ -55,27 +57,18 @@
           <img src="assets/carousel3.jpg" alt="Imagen 3" />
         </picture>
         <div class="text-container">
-          <h2>Las ideas poderosas, pueden cambiar el mundo.</h2>
-          <p>Llevá tu negocio al siguiente nivel.</p>
+          <h2 data-key="carousel.slide3.title">Las ideas poderosas, pueden cambiar el mundo.</h2>
+          <p data-key="carousel.slide3.subtitle">Llevá tu negocio al siguiente nivel.</p>
         </div>
       </div>
     </section>
-    
-    
+
     <!-- About Me Section -->
     <section id="about-me" class="about-me">
       <div class="about-me-content">
         <div class="text-content">
-          <h2>Apostar a calidad y experiencia, marca la diferencia.</h2>
-          <p>
-            Con más de 10 años de experiencia en la industria, he trabajado en
-            agencias de publicidad y empresas para diversas marcas y rubros en
-            Argentina, España e Irlanda. Desde emprendimientos con bajo
-            presupuesto hasta empresas posicionadas en el mercado, he logrado
-            hacer crecer cada negocio de forma eficiente, posicionando la marca
-            y fidelizando clientes. Soy una profesional apasionada y detallista
-            que le da un valor agregado a cada proyecto. ¿Empezamos?
-          </p>
+          <h2 data-key="about.title">Apostar a calidad y experiencia, marca la diferencia.</h2>
+          <p data-key="about.content">Con más de 10 años de experiencia en la industria, he trabajado en agencias de publicidad y empresas para diversas marcas y rubros en Argentina, España e Irlanda...</p>
           <a href="https://www.linkedin.com/in/carla-ferrari-0b234220a/">Más de mí</a>
         </div>
         <div class="image-content">
@@ -87,34 +80,28 @@
     <!-- Services Section -->
     <section id="services" class="services">
       <div class="services-content">
-        <h2>
-          ¿Querés comunicar tu producto, lanzar tu marca o destacar en el
-          mercado pero no sabés cómo?
-        </h2>
-        <p style="margin: 25px 0">
-          Conocé los servicios y los paquetes personalizados con los que podemos
-          trabajar.
-        </p>
+        <h2 data-key="services.intro">¿Querés comunicar tu producto, lanzar tu marca o destacar en el mercado pero no sabés cómo?</h2>
+        <p data-key="services.description" style="margin: 25px 0">Conocé los servicios y los paquetes personalizados con los que podemos trabajar.</p>
         <div class="services-grid">
-          <div class="service-item">
+          <div class="service-item" data-key="services.list.copywriting">
             <h3>Redacción publicitaria</h3>
           </div>
-          <div class="service-item">
+          <div class="service-item" data-key="services.list.project_management">
             <h3>Project management</h3>
           </div>
-          <div class="service-item">
+          <div class="service-item" data-key="services.list.communication_strategy">
             <h3>Estrategia de comunicación</h3>
           </div>
-          <div class="service-item">
+          <div class="service-item" data-key="services.list.brand_identity">
             <h3>Identidad de marca</h3>
           </div>
-          <div class="service-item">
+          <div class="service-item" data-key="services.list.script_writing">
             <h3>Redacción de guiones audiovisuales</h3>
           </div>
-          <div class="service-item">
+          <div class="service-item" data-key="services.list.social_media_content">
             <h3>Creación de contenido en Redes sociales</h3>
           </div>
-          <div class="service-item">
+          <div class="service-item" data-key="services.list.seo_sem_writing">
             <h3>Redacción de textos SEO/SEM</h3>
           </div>
         </div>
@@ -123,128 +110,124 @@
 
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio">
-      <h2>Casos de éxito</h2>
+      <h2 data-key="portfolio.title">Casos de éxito</h2>
       <div class="portfolio-grid">
           <a href="https://www.behance.net/gallery/148663751/Bodega-Norton-Social-media" class="portfolio-item" target="_blank">
               <img src="assets/portfolio1.jpg" alt="Proyecto 1">
-              <h3>Proyecto 1</h3>
-              <p>Descripción breve del proyecto 1.</p>
+              <h3 data-key="portfolio.project1.title">Proyecto 1</h3>
+              <p data-key="portfolio.project1.description">Descripción breve del proyecto 1.</p>
           </a>
           <a href="https://www.behance.net/gallery/147608179/Chicco-Campaign" class="portfolio-item" target="_blank">
               <img src="assets/portfolio2.jpg" alt="Proyecto 2">
-              <h3>Proyecto 2</h3>
-              <p>Descripción breve del proyecto 2.</p>
+              <h3 data-key="portfolio.project2.title">Proyecto 2</h3>
+              <p data-key="portfolio.project2.description">Descripción breve del proyecto 2.</p>
           </a>
           <a href="https://www.behance.net/gallery/147506437/Allergan-Campaign" class="portfolio-item" target="_blank">
               <img src="assets/portfolio3.jpg" alt="Proyecto 3">
-              <h3>Proyecto 3</h3>
-              <p>Descripción breve del proyecto 3.</p>
+              <h3 data-key="portfolio.project3.title">Proyecto 3</h3>
+              <p data-key="portfolio.project3.description">Descripción breve del proyecto 3.</p>
           </a>
           <a href="https://www.behance.net/gallery/147510987/La-Malbequeria-Social-media" class="portfolio-item" target="_blank">
               <img src="assets/portfolio4.jpg" alt="Proyecto 4">
-              <h3>Proyecto 4</h3>
-              <p>Descripción breve del proyecto 4.</p>
+              <h3 data-key="portfolio.project4.title">Proyecto 4</h3>
+              <p data-key="portfolio.project4.description">Descripción breve del proyecto 4.</p>
           </a>
           <a href="https://www.behance.net/gallery/148733719/Lo-De-Jesus-Campaign" class="portfolio-item" target="_blank">
               <img src="assets/portfolio5.jpg" alt="Proyecto 5">
-              <h3>Proyecto 5</h3>
-              <p>Descripción breve del proyecto 5.</p>
+              <h3 data-key="portfolio.project5.title">Proyecto 5</h3>
+              <p data-key="portfolio.project5.description">Descripción breve del proyecto 5.</p>
           </a>
           <a href="https://www.behance.net/gallery/147586873/Coolsculpting-Campaign" class="portfolio-item" target="_blank">
               <img src="assets/portfolio6.jpg" alt="Proyecto 6">
-              <h3>Proyecto 6</h3>
-              <p>Descripción breve del proyecto 6.</p>
+              <h3 data-key="portfolio.project6.title">Proyecto 6</h3>
+              <p data-key="portfolio.project6.description">Descripción breve del proyecto 6.</p>
           </a>
       </div>
-  </section>
-  
+    </section>
 
     <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials">
-      <h2>Testimonios</h2>
+      <h2 data-key="testimonials.title">Testimonios</h2>
       <div class="testimonials-content">
           <div class="testimonial">
               <img src="assets/testimonio1.jpg" alt="Ana">
               <div class="testimonial-details">
-                  <p class="font-bold">Ana, 32</p>
-                  <p>Gerenta de Marketing | WeWork</p>
-                  <p>"Fue un placer trabajar con Carli. Además de una gran persona, es una gran profesional. Llevó adelante cada desafío con dedicación y responsabilidad, siempre atenta al más mínimo detalle. Destaco su creatividad y energía positiva para trabajar. Sus aportes eran siempre acertados y fueron claves para el éxito de muchas campañas publicitarias."</p>
+                  <p class="font-bold" data-key="testimonials.testimonial1.name">Ana, 32</p>
+                  <p data-key="testimonials.testimonial1.position">Gerenta de Marketing | WeWork</p>
+                  <p data-key="testimonials.testimonial1.content">"Fue un placer trabajar con Carli. Además de una gran persona, es una gran profesional. Llevó adelante cada desafío con dedicación y responsabilidad, siempre atenta al más mínimo detalle. Destaco su creatividad y energía positiva para trabajar. Sus aportes eran siempre acertados y fueron claves para el éxito de muchas campañas publicitarias."</p>
               </div>
           </div>
           <div class="testimonial">
               <img src="assets/testimonio2.jpg" alt="Lucía">
               <div class="testimonial-details">
-                  <p class="font-bold">Lucía, 31</p>
-                  <p>Supervisora de cuentas | The community</p>
-                  <p>"Trabajar con Carli es un gusto enorme. Es una persona sumamente creativa y encara los proyectos con la mejor predisposición, entendiendo y resolviendo los pedidos y necesidades del cliente. A nivel personal siempre está dispuesta a ayudar y trasmite la mejor energía."</p>
+                  <p class="font-bold" data-key="testimonials.testimonial2.name">Lucía, 31</p>
+                  <p data-key="testimonials.testimonial2.position">Supervisora de cuentas | The community</p>
+                  <p data-key="testimonials.testimonial2.content">"Trabajar con Carli es un gusto enorme. Es una persona sumamente creativa y encara los proyectos con la mejor predisposición, entendiendo y resolviendo los pedidos y necesidades del cliente. A nivel personal siempre está dispuesta a ayudar y trasmite la mejor energía."</p>
               </div>
           </div>
           <div class="testimonial">
               <img src="assets/testimonio3.jpg" alt="Facundo">
               <div class="testimonial-details">
-                  <p class="font-bold">Facundo, 33</p>
-                  <p>Desarrollador web | Montagne</p>
-                  <p>"Trabajar con Carla es hacerlo con una persona que ama lo que hace. Siempre dispuesta a trabajar en equipo, aportando creatividad, organización y compromiso, con una energía que se contagia. Espero podamos volver a trabajar juntos pronto!"</p>
+                  <p class="font-bold" data-key="testimonials.testimonial3.name">Facundo, 33</p>
+                  <p data-key="testimonials.testimonial3.position">Desarrollador web | Montagne</p>
+                  <p data-key="testimonials.testimonial3.content">"Trabajar con Carla es hacerlo con una persona que ama lo que hace. Siempre dispuesta a trabajar en equipo, aportando creatividad, organización y compromiso, con una energía que se contagia. Espero podamos volver a trabajar juntos pronto!"</p>
               </div>
           </div>
           <div class="testimonial">
               <img src="assets/testimonio4.jpg" alt="Brenda">
               <div class="testimonial-details">
-                  <p class="font-bold">Brenda, 26</p>
-                  <p>Diseñadora gráfica | Alma Buenos Aires</p>
-                  <p>"Trabajamos juntas y puedo asegurar que es una gran profesional. Responsable, buena compañera, resolutiva y sobretodo apasionada por lo que hace. Todo eso hace que sea un gusto trabajar con ella."</p>
+                  <p class="font-bold" data-key="testimonials.testimonial4.name">Brenda, 26</p>
+                  <p data-key="testimonials.testimonial4.position">Diseñadora gráfica | Alma Buenos Aires</p>
+                  <p data-key="testimonials.testimonial4.content">"Trabajamos juntas y puedo asegurar que es una gran profesional. Responsable, buena compañera, resolutiva y sobretodo apasionada por lo que hace. Todo eso hace que sea un gusto trabajar con ella."</p>
               </div>
           </div>
       </div>
-  </section>
-  
-  
+    </section>
 
     <!-- Book Section -->
     <section id="book" class="book">
-      <h2>Libro</h2>
+      <h2 data-key="book.title">Libro</h2>
       <div class="book-content">
-        <span>Próximamente</span>
+        <span data-key="book.content">Próximamente</span>
       </div>
     </section>
 
-   
-  <!-- Contact Section -->
-<section id="contact" class="contact">
-  <h2>Contacto</h2>
-  <div class="contact-content">
-      <div class="contact-text">
-          <p>Un producto bien comunicado, es una nueva venta.</p>
-          <p>Contactame hoy y agendemos una meeting.</p>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <h2 data-key="contact.title">Contacto</h2>
+      <div class="contact-content">
+          <div class="contact-text">
+              <p data-key="contact.intro">Un producto bien comunicado, es una nueva venta.</p>
+              <p data-key="contact.call_to_action">Contactame hoy y agendemos una meeting.</p>
+          </div>
       </div>
-  </div>
-  <div class="contact-links">
-      <a href="mailto:carferrari94@gmail.com">
-          <img src="assets/email.png" alt="Email Icon" />
-          <span>carferrari94@gmail.com</span>
-      </a>
-      <a href="tel:+540400738349">
-          <img src="assets/phone-call.png" alt="Phone Icon" />
-          <span>0400738349</span>
-      </a>
-      <a href="https://www.linkedin.com/in/carla-ferrari-0b234220a/" target="_blank">
-          <img src="assets/linkedin.png" alt="LinkedIn Icon" />
-          <span>LinkedIn</span>
-      </a>
-      <a href="https://www.instagram.com/carferrari94" target="_blank">
-          <img src="assets/instagram.png" alt="Instagram Icon" />
-          <span>Instagram</span>
-      </a>
-      <a href="https://www.behance.net/carla_ferrari" target="_blank">
-          <img src="assets/behance.png" alt="Behance Icon" />
-          <span>Behance</span>
-      </a>
-  </div>
-</section>
+      <div class="contact-links">
+        <a href="mailto:carferrari94@gmail.com">
+            <img src="assets/email.png" alt="Email Icon" />
+            <span data-key="contact.email">carferrari94@gmail.com</span>
+        </a>
+        <a href="tel:+540400738349">
+            <img src="assets/phone-call.png" alt="Phone Icon" />
+            <span data-key="contact.phone">0400738349</span>
+        </a>
+        <a href="https://www.linkedin.com/in/carla-ferrari-0b234220a/" target="_blank">
+            <img src="assets/linkedin.png" alt="LinkedIn Icon" />
+            <span data-key="contact.linkedin">LinkedIn</span>
+        </a>
+        <a href="https://www.instagram.com/carferrari94" target="_blank">
+            <img src="assets/instagram.png" alt="Instagram Icon" />
+            <span data-key="contact.instagram">Instagram</span>
+        </a>
+        <a href="https://www.behance.net/carla_ferrari" target="_blank">
+            <img src="assets/behance.png" alt="Behance Icon" />
+            <span data-key="contact.behance">Behance</span>
+        </a>
+      </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
-      <p>&copy; 2024 Carla Ferrari. Todos los derechos reservados.</p>
+      <p data-key="footer.copyright">&copy; 2024 Carla Ferrari. Todos los derechos reservados.</p>
     </footer>
 
     <script src="carousel.js"></script>

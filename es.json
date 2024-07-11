@@ -1,0 +1,109 @@
+{
+  "navbar": {
+    "home": "Inicio",
+    "about": "Acerca de mí",
+    "services": "Servicios",
+    "portfolio": "Portafolio",
+    "testimonials": "Testimonios",
+    "book": "Libro",
+    "contact": "Contacto"
+  },
+  "carousel": {
+    "slide1": {
+      "title": "Las ideas poderosas, pueden cambiar el mundo.",
+      "subtitle": "Llevá tu negocio al siguiente nivel."
+    },
+    "slide2": {
+      "title": "Las ideas poderosas, pueden cambiar el mundo.",
+      "subtitle": "Llevá tu negocio al siguiente nivel."
+    },
+    "slide3": {
+      "title": "Las ideas poderosas, pueden cambiar el mundo.",
+      "subtitle": "Llevá tu negocio al siguiente nivel."
+    }
+  },
+  "about": {
+    "title": "Apostar a calidad y experiencia, marca la diferencia.",
+    "content": "Con más de 10 años de experiencia en la industria, he trabajado en agencias de publicidad y empresas para diversas marcas y rubros en Argentina, España e Irlanda. Desde emprendimientos con bajo presupuesto hasta empresas posicionadas en el mercado, he logrado hacer crecer cada negocio de forma eficiente posicionando la marca y fidelizando clientes. Soy una profesional apasionada y detallista que le da un valor agregado a cada proyecto. ¿Empezamos?"
+  },
+  "services": {
+    "intro": "¿Querés comunicar tu producto, lanzar tu marca o destacar en el mercado pero no sabés cómo?",
+    "description": "Conocé los servicios y los paquetes personalizados con los que podemos trabajar.",
+    "list": {
+      "copywriting": "Redacción publicitaria",
+      "project_management": "Project management",
+      "communication_strategy": "Estrategia de comunicación",
+      "brand_identity": "Identidad de marca",
+      "script_writing": "Redacción de guiones audiovisuales",
+      "social_media_content": "Creación de contenido en Redes sociales",
+      "seo_sem_writing": "Redacción de textos SEO/SEM"
+    }
+  },
+  "portfolio": {
+    "title": "Casos de éxito",
+    "project1": {
+      "title": "Proyecto 1",
+      "description": "Descripción breve del proyecto 1."
+    },
+    "project2": {
+      "title": "Proyecto 2",
+      "description": "Descripción breve del proyecto 2."
+    },
+    "project3": {
+      "title": "Proyecto 3",
+      "description": "Descripción breve del proyecto 3."
+    },
+    "project4": {
+      "title": "Proyecto 4",
+      "description": "Descripción breve del proyecto 4."
+    },
+    "project5": {
+      "title": "Proyecto 5",
+      "description": "Descripción breve del proyecto 5."
+    },
+    "project6": {
+      "title": "Proyecto 6",
+      "description": "Descripción breve del proyecto 6."
+    }
+  },
+  "testimonials": {
+    "title": "Testimonios",
+    "testimonial1": {
+      "name": "Ana, 32",
+      "position": "Gerenta de Marketing | WeWork",
+      "content": "Fue un placer trabajar con Carli. Además de una gran persona, es una gran profesional. Llevó adelante cada desafío con dedicación y responsabilidad, siempre atenta al más mínimo detalle. Destaco su creatividad y energía positiva para trabajar. Sus aportes eran siempre acertados y fueron claves para el éxito de muchas campañas publicitarias."
+    },
+    "testimonial2": {
+      "name": "Lucía, 31",
+      "position": "Supervisora de cuentas | The community",
+      "content": "Trabajar con Carli es un gusto enorme. Es una persona sumamente creativa y encara los proyectos con la mejor predisposición, entendiendo y resolviendo los pedidos y necesidades del cliente. A nivel personal siempre está dispuesta a ayudar y trasmite la mejor energía."
+    },
+    "testimonial3": {
+      "name": "Facundo, 33",
+      "position": "Desarrollador web | Montagne",
+      "content": "Trabajar con Carla es hacerlo con una persona que ama lo que hace. Siempre dispuesta a trabajar en equipo, aportando creatividad, organización y compromiso, con una energía que se contagia. Espero podamos volver a trabajar juntos pronto!"
+    },
+    "testimonial4": {
+      "name": "Brenda, 26",
+      "position": "Diseñadora gráfica | Alma Buenos Aires",
+      "content": "Trabajamos juntas y puedo asegurar que es una gran profesional. Responsable, buena compañera, resolutiva y sobretodo apasionada por lo que hace. Todo eso hace que sea un gusto trabajar con ella."
+    }
+  },
+  "book": {
+    "title": "Libro",
+    "content": "Próximamente"
+  },
+  "contact": {
+    "title": "Contacto",
+    "intro": "Un producto bien comunicado, es una nueva venta.",
+    "call_to_action": "Contactame hoy y agendemos una meeting.",
+    "email": "carferrari94@gmail.com",
+    "phone": "0400738349",
+    "linkedin": "LinkedIn",
+    "instagram": "Instagram",
+    "behance": "Behance"
+  },
+  "footer": {
+    "copyright": "© 2024 Carla Ferrari. Todos los derechos reservados."
+  }
+}

@@ -74,4 +74,45 @@ document.addEventListener("DOMContentLoaded", () => {
     toggleButton.addEventListener("click", () => {
         navbarLinks.classList.toggle("show");
     });
+
+    // Language selection
+    const langSelector = document.querySelector("#lang-selector");
+
+    const loadLanguage = (lang) => {
+        fetch(`${lang}.json`)
+            .then(response => response.json())
+            .then(data => applyLanguage(data))
+            .catch(error => console.error('Error loading language:', error));
+    };
+
+    const applyLanguage = (data) => {
+        document.querySelectorAll("[data-key]").forEach(element => {
+            const key = element.getAttribute("data-key");
+            const keys = key.split('.');
+            let value = data;
+            keys.forEach(k => {
+                if (value && value.hasOwnProperty(k)) {
+                    value = value[k];
+                } else {
+                    console.error(`Key "${k}" not found in data for "${key}"`);
+                    value = null;
+                }
+            });
+            if (typeof value === 'string') {
+                element.textContent = value;
+            } else {
+                console.error(`Value for key "${key}" is not a string:`, value);
+            }
+        });
+    };
+
+    langSelector.addEventListener("change", (e) => {
+        const selectedLang = e.target.value;
+        localStorage.setItem("preferredLanguage", selectedLang);
+        loadLanguage(selectedLang);
+    });
+
+    const preferredLanguage = localStorage.getItem("preferredLanguage") || "es";
+    loadLanguage(preferredLanguage);
+    langSelector.value = preferredLanguage;
 });

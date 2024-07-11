@@ -25,7 +25,7 @@ body {
     color: #4a4a4a;
 }
 
-/* NAV */
+
 /* Navbar */
 .navbar {
     background-color: #f5f5dc;
@@ -61,6 +61,7 @@ body {
 
 .navbar-links {
     display: flex;
+    align-items: center;
     gap: 1rem;
 }
 
@@ -75,10 +76,16 @@ body {
     color: #2a2a2a;
 }
 
+#lang-selector {
+    font-size: 1rem;
+    padding: 5px; 
+}
+
 /* Default Navbar Toggle Hidden */
 .navbar-toggle {
     display: none;
 }
+
 
 /*Carousel*/
 
@@ -546,4 +553,13 @@ body {
     .text-container {
         font-size: small;
     }
+}
+
+#lang-selector {
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+    background-color: #f5f5dc;
+    color: #333;
 }
