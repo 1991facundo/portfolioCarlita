@@ -4,6 +4,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* BODY */
+body {
+    padding-top: 80px;
+    margin: 0;
+    background-color: blanchedalmond;
+    font-family: Arial, sans-serif;
+    color: #4a4a4a;
+}
 
 /* NAV */
 .navbar {
@@ -42,14 +50,7 @@
     color: #2a2a2a;
 }
 
-/* BODY */
-body {
-    padding-top: 80px;
-    margin: 0;
-    background-color: blanchedalmond;
-    font-family: Arial, sans-serif;
-    color: #4a4a4a;
-}
+
 
 /* CAROUSEL */
 .carousel {
@@ -187,7 +188,6 @@ body {
     margin-bottom: 0.5rem;
 }
 
-
 /* PORTFOLIO */
 .portfolio {
     padding: 6rem 2rem;
@@ -201,7 +201,7 @@ body {
 
 .portfolio-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
 }
 
@@ -218,8 +218,9 @@ body {
 }
 
 .portfolio-item img {
-    width: 100%;
-    height: auto;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
     border-radius: 8px;
 }
 
@@ -228,6 +229,7 @@ body {
     font-weight: bold;
     margin: 1rem 0 0.5rem;
 }
+
 
 /* TESTIMONIALS */
 .testimonials {
